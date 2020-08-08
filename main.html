@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="ko-kr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bootstrap 101 Template</title>
+
+<!-- Bootstrap -->
+<link href="bootstrap.css" rel="stylesheet">
+<link href="custom2.css" rel="stylesheet">
+
+<style>
+body { padding-top: 10px; }
+.page-header {margin: 0px; padding: 0px; background: black}
+.join { font-size: 18px; }
+.cookie { float: left;}
+.row { margin: 20px;}
+.footer {
+	margin-top: 50px
+}
+
+.img-rounded { max-width: 100%; height: auto; } 
+.drop { margin: 20px;}
+#full { margin: 0px;}
+.col-md-3 {border-right: solid 1px gray; padding: 15px}
+.col-md-4 {border-right: solid 1px gray; padding: 15px}
+.carousel-inner { max-height: 280px; overflow: hidden; position: relative;}
+.carousel-caption { position: absolute; top: 10%; left: 20% }
+#full2 { margin: 0px; border-top: solid 1px; height: auto; width: auto; }
+#menu1 { padding-top: 70px; }
+#menu2 { padding-top: 70px; }
+#menu3 { padding-top: 70px; }
+</style>
+
+</head>
+<body data-spy="scroll" data-target="#navbar-example" data-offset="50">
+
+<!-- navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top page-header" role="navigation" id="navbar-example">
+      <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#"><span style="color: white; font-size: 20px; padding-right: 10px" class="glyphicon glyphicon-arrow-up"></span> </a>
+      </div>
+      
+      <div class="collapse navbar-collapse navbar-ex1-collapse">
+        <ul class="nav navbar-nav">
+     
+         <li class="dropdown">
+            <a href="#" class="dropdown-toggle" style="color: white; background: gray;" data-toggle="dropdown">메뉴 <b class="caret"></b></a>
+            <ul class="dropdown-menu" style="background: gray;">
+              <li><a style="color: black;" href="main.html">홈</a></li>
+            </ul>
+          </li> 
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" style="color: white; background: gray;" data-toggle="dropdown">게시판 <b class="caret"></b></a>
+            <ul class="dropdown-menu" style="background: gray;">
+              <li><a style="color: black;" href="board.html">게시판</a></li>
+              <li><a style="color: black;" href="boardWrite.html">글작성</a></li>
+              <li><a style="color: black;" href="imageBoard.html">이미지게시판</a></li>
+
+            </ul>
+          </li> 
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" style="color: white; background: gray;" data-toggle="dropdown">회원정보<b class="caret"></b></a>
+            <ul class="dropdown-menu" style="background: gray;">
+              <li><a style="color: black;" href="modify.html">회원정보</a></li>
+            </ul>
+          </li> 
+        
+        
+        
+        
+        </ul>
+        
+        <div class="navbar-form navbar-right" style="text-align: right; padding-top: 6px; font-size: 18px">
+		<a href="#myModalLogin" data-toggle="modal"><strong>로그인</strong></a>
+		<span>ㅤ</span>
+		<a href="#myModal" data-toggle="modal"><strong>회원가입</strong></a>
+		</div>
+
+      </div><!-- /.navbar-collapse -->
+      
+      
+      </div><!-- container -->
+    </nav> <!-- navbar 끝-->
+    
+    <hr>
+
+	<div class="container" >
+		
+		<!-- Modal -->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog"
+			aria-labelledby="myModalLabel" aria-hidden="true">
+			<div  class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">
+							<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+						</button>
+						<h4 class="modal-title" id="myModalLabel">회원가입</h4>
+					</div>
+					<div class="modal-body">
+						<!-- 여기는 내용이 들어 가는 곳 -->
+						<div class="join">아이디
+						<div class="input-group">
+							<span class="input-group-addon"> 
+								<span class="glyphicon glyphicon-user">
+							 	</span>
+							</span> 
+							<input type="text" class="form-control" placeholder="아이디">
+						</div>
+						</div>
+						<br>
+						<div class="join">비밀번호
+						<div class="input-group">
+							<span class="input-group-addon"> 
+								<span class="glyphicon glyphicon-lock">
+								</span>
+							</span> 
+							<input type="password" class="form-control" placeholder="비밀번호">
+						</div>
+						</div>
+						<br>
+						<div class="join">비밀번호 재확인
+						<div class="input-group">
+							<span class="input-group-addon"> 
+								<span class="glyphicon glyphicon-lock">
+								</span>
+							</span> 
+							<input type="password" class="form-control" placeholder="비밀번호">
+						</div>
+						</div>
+						<br>
+						<div class="join">이름
+						<div class="input-group">
+							<span class="input-group-addon"> 
+								<span class="glyphicon glyphicon-font">
+								</span>
+							</span> 
+							<input type="text" class="form-control" placeholder="이름">
+						</div>
+						</div>
+						<br>
+						<div class="join">이메일
+						<div class="input-group">
+							<span class="input-group-addon"> 
+								<span class="glyphicon glyphicon-envelope"> 
+								</span>
+							</span> 
+							<input type="text" class="form-control" placeholder="이메일">
+						</div>
+						</div>
+						<div class="join">주소
+						<div class="input-group">
+							<span class="input-group-addon"> 
+								<span class="glyphicon glyphicon-font">
+								</span>
+							</span> 
+							<input type="text" class="form-control" placeholder="주소">
+						</div>
+						</div>
+						
+						<br>
+						<div class="join">성별
+						<div class="input-group">
+							<span class="input-group-addon"> 
+								<span class="glyphicon glyphicon-user"> 
+								</span>
+							</span> 
+							<select class="form-control">
+							  <option>남</option>
+							  <option>여</option>
+							</select>
+						</div>
+						</div>
+						<br>
+						
+						<div class="join">연락처
+						<div class="input-group">
+							<span class="input-group-addon"> <span
+								class="glyphicon glyphicon-phone-alt"> </span>
+							</span> <input type="tel" class="form-control" placeholder="연락처">
+						</div>
+						</div>
+						<br>
+
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">닫기</button>
+						<button type="button" class="btn btn-primary">회원가입</button>
+					</div>
+				</div>
+				<!-- 모달 콘텐츠 -->
+			</div>
+			<!-- 모달 다이얼로그 -->
+		</div>
+		<!-- 모달 전체 윈도우 -->
+		
+		<div class="modal fade" id="myModalLogin" tabindex="-1" role="dialog"
+			aria-labelledby="myModalLabel" aria-hidden="true">
+			<div  class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">
+							<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+						</button>
+						<h4 class="modal-title" id="myModalLabel">회원가입</h4>
+					</div>
+					<div class="modal-body">
+						<!-- 여기는 내용이 들어 가는 곳 -->
+						<div class="join">아이디
+						<div class="input-group">
+							<span class="input-group-addon"> <span
+								class="glyphicon glyphicon-user"> </span>
+							</span> <input type="text" class="form-control" placeholder="아이디">
+						</div>
+						</div>
+						<br>
+						<div class="join">비밀번호
+						<div class="input-group">
+							<span class="input-group-addon"> <span
+								class="glyphicon glyphicon-lock"></span>
+							</span> <input type="password" class="form-control" placeholder="비밀번호">
+						</div>
+						</div>
+						<br>
+
+					</div>
+					<div class="modal-footer">
+						<label class="cookie" ><input type="checkbox"> Remember me</label>
+						<button type="button" class="btn btn-default" data-dismiss="modal">닫기</button>
+						<button type="button" class="btn btn-primary">로그인</button>
+					</div>
+				</div>
+				<!-- 모달 콘텐츠 -->
+			</div>
+			<!-- 모달 다이얼로그 -->
+		</div>
+		<!-- 모달 전체 윈도우 -->
+	</div>
+
+    <div class="row" id="full" style="background: #F8F8F8; " >
+		<div class="col-md-6" style="text-align: right;">
+			<span style="padding-left: 30px; font-size: 75px;" id="menu1">WELCOME<br> BOOTSTRAP</span><br>
+			<button type="button" onclick="location.href='http://bootstrapk.com/' " class="btn btn-default btn-lg">
+			시작하기
+			</button>
+		</div>
+		<div class="col-md-6" style="background: white">
+			<div class="col-md-8" style="padding: 10px">
+				<span style="font-size: 22px;" class="text-info">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.   
+				</span>
+			</div>
+		</div>
+	</div>
+	
+	
+	
+	<div style="text-align: center; background: #BDBDBD;" 
+	 onMouseover="this.style.color='white'; this.style.background='#2196f3';"
+	 onMouseout="this.style.color='black'; this.style.background='#BDBDBD';">
+	<h1 style="margin: 0px; padding: 20px;">BOOTSTRAP</h1>
+	</div>
+		
+	
+
+	<div class="row borderR" style="margin: 0px" >
+		<div class="col-md-3 typo">
+			<div class="text-primary">
+			<h3 style="margin-top: 0px; margin-bottom: 15px">abcd</h3>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.   
+			</div>
+		</div>
+		<div class="col-md-3 typo">
+			<div class="text-success">
+			<h3 style="margin-top: 0px; margin-bottom: 15px">abcd</h3>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.   
+			</div>
+		</div>
+		<div class="col-md-3 typo">
+			<div class="text-warning">
+			<h3 style="margin-top: 0px; margin-bottom: 15px">abcd</h3>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.   
+			</div>
+		</div>
+		<div class="col-md-3 finalTypo" style="border-right: none;">
+			<div class="text-danger">
+			<h3 style="margin-top: 0px; margin-bottom: 15px;">abcd</h3>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.   
+			</div>
+		</div>
+	</div>
+	
+	
+	
+	<div class="row" id="full2" style="background: black;"  >
+		<div class="col-md-6" style="padding: 0px; max-height: 300px;">
+		<div style="margin: 0px;"> 
+	 <div id="carousel-example-generic" class="carousel slide " >
+            <!-- Indicators 현재 몇개의 슬라이더와 활성화된 슬라이드를 부여준다 -->
+            <ol class="carousel-indicators">
+              <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+              <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+              <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+            </ol>
+                 <!-- Carousel items -->
+             <div class="carousel-inner" >
+                <div class="item active">
+                   <img src="ny.jpg" alt="First slide">
+                   <div class="carousel-caption">
+                        <h4>슬라이드 효과 </h4>
+                    </div>  
+                </div>
+                <div class="item">
+                   <img src="bluerose.jpg" alt="Second slide">
+                   <div class="carousel-caption">
+                        <h4>슬라이드 효과 </h4>
+                    </div>                 
+                </div>
+                <div class="item">
+                   <img src="la.jpg" alt="Third slide">
+                   <div class="carousel-caption">
+                        <h4>슬라이드 효과 </h4>
+                    </div>                   
+                </div>
+             </div>
+            <!-- Controls -->
+              <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                <span class="icon-prev"></span>
+              </a>
+              <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                <span class="icon-next"></span>
+              </a>
+          </div>
+	</div>
+		</div>
+		<div class="col-md-6" style="background: black; max-height: 300px; color: white">
+			<div class="col-md-8" style="padding: 10px;">
+				<span style="font-size: 15px;" id="menu2">
+				<h3>WORLD</h1>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.   
+				</span>
+			</div>
+		</div>
+	</div>
+	
+	
+	
+	<div class="row" style="margin: 25px; font-size: 80px; text-align: center">
+		<div class="col-md-4 responsiveutil">
+			<div class="text-primary visible-md box cl1 visible-lg box cl1">
+			<span class="glyphicon glyphicon-adjust"></span>
+			<div style="font-size: 30px"><br>변하는 PRIMARY</div>
+			</div>
+			
+			<div class="text-muted visible-sm box cl1 visible-xs box cl1">
+			<span class="glyphicon glyphicon-certificate"></span>
+			<div style="font-size: 30px"><br>변하는 MUTED</div>
+			</div>
+		</div>
+		
+		<div class="col-md-4 responsiveutil">
+			<div class="text-success visible-md box cl1 visible-lg box cl1">
+			<span class="glyphicon glyphicon-camera"></span>
+			<div style="font-size: 30px"><br>변하는 SUCCESS</div>
+			</div>
+			
+			<div class="text-info visible-sm box cl1 visible-xs box cl1">
+			<span class="glyphicon glyphicon-eye-open"></span>
+			<div style="font-size: 30px"><br>변하는 INFO</div>
+			</div>
+		</div>
+		
+		<div class="col-md-4 finalResponsiveutil" style="border: none;">
+			<div class="text-danger visible-md box cl1 visible-lg box cl1">
+			<span class="glyphicon glyphicon-flash"></span>
+			<div style="font-size: 30px"><br>변하는 DANGER</div>
+			</div>
+			
+			<div class="text-warning visible-sm box cl1 visible-xs box cl1">
+			<span class="glyphicon glyphicon-thumbs-up"></span>
+			<div style="font-size: 30px"><br>변하는 WARNING</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="footer">
+		<div style="text-align: center">
+		<hr style="color: black">
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
+		</div>		
+		<hr>
+	</div>
+
+
+
+	<script src="jquery-3.5.1.js"></script>
+	<script src="bootstrap.js"></script>
+	<script>
+	$('.carousel').carousel({
+		interval: 3000
+		});
+	
+	
+	
+	$(window).resize(function() { 
+		if($(window).width() < 992) {
+			$('.typo, .responsiveutil').css({"border":"none"});
+		} else {
+			$('.typo, .responsiveutil').css({"border-right":"solid 1px black"},{"padding":"15px"});
+			
+		}
+	});
+
+
+	</script>
+</body>
+</html>

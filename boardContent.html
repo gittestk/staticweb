@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="ko-kr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bootstrap 101 Template</title>
+
+<!-- Bootstrap -->
+<link href="bootstrap.css" rel="stylesheet">
+<link href="custom2.css" rel="stylesheet">
+
+<style>
+body {
+	padding-top: 10px;
+}
+
+.page-header {margin: 0px; padding: 0px; background: black}
+
+.page-header {margin: 0px; padding: 0px}
+
+.table {
+	margin-top: 20px
+}
+button {
+	margin-right: 10px
+}
+th {
+	width: 70px
+}
+.footer {
+	margin-top: 50px
+}
+
+
+</style>
+
+</head>
+<body data-spy="scroll" data-target="#navbar-example page-header" data-offset="50">
+	   <body data-spy="scroll" data-target="#navbar-example" data-offset="50">
+
+<!-- navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top page-header" role="navigation" id="navbar-example">
+      <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#"><span style="color: white; font-size: 20px; padding-right: 10px" class="glyphicon glyphicon-arrow-up"></span> </a>
+      </div>
+      
+      <div class="collapse navbar-collapse navbar-ex1-collapse">
+        <ul class="nav navbar-nav">
+     
+         <li class="dropdown">
+            <a href="#" class="dropdown-toggle" style="color: white; background: gray;" data-toggle="dropdown">메뉴 <b class="caret"></b></a>
+            <ul class="dropdown-menu" style="background: gray;">
+              <li><a style="color: black;" href="main.html">홈</a></li>
+            </ul>
+          </li> 
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" style="color: white; background: gray;" data-toggle="dropdown">게시판 <b class="caret"></b></a>
+            <ul class="dropdown-menu" style="background: gray;">
+              <li><a style="color: black;" href="board.html">게시판</a></li>
+              <li><a style="color: black;" href="boardWrite.html">글작성</a></li>
+              <li><a style="color: black;" href="imageBoard.html">이미지게시판</a></li>
+
+            </ul>
+          </li> 
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" style="color: white; background: gray;" data-toggle="dropdown">회원정보<b class="caret"></b></a>
+            <ul class="dropdown-menu" style="background: gray;">
+              <li><a style="color: black;" href="modify.html">회원정보</a></li>
+            </ul>
+          </li> 
+        
+        
+        
+        
+        </ul>
+        
+        <div class="navbar-form navbar-right" style="text-align: right; padding-top: 6px; font-size: 18px">
+		<a href="#myModalLogin" data-toggle="modal"><strong>로그인</strong></a>
+		<span>ㅤ</span>
+		<a href="#myModal" data-toggle="modal"><strong>회원가입</strong></a>
+		</div>
+
+      </div><!-- /.navbar-collapse -->
+      
+      
+      </div><!-- container -->
+    </nav> <!-- navbar 끝-->
+    
+    <hr>
+
+	<div class="container" >
+		
+		<!-- Modal -->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog"
+			aria-labelledby="myModalLabel" aria-hidden="true">
+			<div  class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">
+							<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+						</button>
+						<h4 class="modal-title" id="myModalLabel">회원가입</h4>
+					</div>
+					<div class="modal-body">
+						<!-- 여기는 내용이 들어 가는 곳 -->
+						<div class="join">아이디
+						<div class="input-group">
+							<span class="input-group-addon"> 
+								<span class="glyphicon glyphicon-user">
+							 	</span>
+							</span> 
+							<input type="text" class="form-control" placeholder="아이디">
+						</div>
+						</div>
+						<br>
+						<div class="join">비밀번호
+						<div class="input-group">
+							<span class="input-group-addon"> 
+								<span class="glyphicon glyphicon-lock">
+								</span>
+							</span> 
+							<input type="password" class="form-control" placeholder="비밀번호">
+						</div>
+						</div>
+						<br>
+						<div class="join">비밀번호 재확인
+						<div class="input-group">
+							<span class="input-group-addon"> 
+								<span class="glyphicon glyphicon-lock">
+								</span>
+							</span> 
+							<input type="password" class="form-control" placeholder="비밀번호">
+						</div>
+						</div>
+						<br>
+						<div class="join">이름
+						<div class="input-group">
+							<span class="input-group-addon"> 
+								<span class="glyphicon glyphicon-font">
+								</span>
+							</span> 
+							<input type="text" class="form-control" placeholder="이름">
+						</div>
+						</div>
+						<br>
+						<div class="join">이메일
+						<div class="input-group">
+							<span class="input-group-addon"> 
+								<span class="glyphicon glyphicon-envelope"> 
+								</span>
+							</span> 
+							<input type="text" class="form-control" placeholder="이메일">
+						</div>
+						</div>
+						<div class="join">주소
+						<div class="input-group">
+							<span class="input-group-addon"> 
+								<span class="glyphicon glyphicon-font">
+								</span>
+							</span> 
+							<input type="text" class="form-control" placeholder="주소">
+						</div>
+						</div>
+						
+						<br>
+						<div class="join">성별
+						<div class="input-group">
+							<span class="input-group-addon"> 
+								<span class="glyphicon glyphicon-user"> 
+								</span>
+							</span> 
+							<select class="form-control">
+							  <option>남</option>
+							  <option>여</option>
+							</select>
+						</div>
+						</div>
+						<br>
+						
+						<div class="join">연락처
+						<div class="input-group">
+							<span class="input-group-addon"> <span
+								class="glyphicon glyphicon-phone-alt"> </span>
+							</span> <input type="tel" class="form-control" placeholder="연락처">
+						</div>
+						</div>
+						<br>
+
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">닫기</button>
+						<button type="button" class="btn btn-primary">회원가입</button>
+					</div>
+				</div>
+				<!-- 모달 콘텐츠 -->
+			</div>
+			<!-- 모달 다이얼로그 -->
+		</div>
+		<!-- 모달 전체 윈도우 -->
+		
+		<div class="modal fade" id="myModalLogin" tabindex="-1" role="dialog"
+			aria-labelledby="myModalLabel" aria-hidden="true">
+			<div  class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">
+							<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+						</button>
+						<h4 class="modal-title" id="myModalLabel">회원가입</h4>
+					</div>
+					<div class="modal-body">
+						<!-- 여기는 내용이 들어 가는 곳 -->
+						<div class="join">아이디
+						<div class="input-group">
+							<span class="input-group-addon"> <span
+								class="glyphicon glyphicon-user"> </span>
+							</span> <input type="text" class="form-control" placeholder="아이디">
+						</div>
+						</div>
+						<br>
+						<div class="join">비밀번호
+						<div class="input-group">
+							<span class="input-group-addon"> <span
+								class="glyphicon glyphicon-lock"></span>
+							</span> <input type="password" class="form-control" placeholder="비밀번호">
+						</div>
+						</div>
+						<br>
+
+					</div>
+					<div class="modal-footer">
+						<label class="cookie" ><input type="checkbox"> Remember me</label>
+						<button type="button" class="btn btn-default" data-dismiss="modal">닫기</button>
+						<button type="button" class="btn btn-primary">로그인</button>
+					</div>
+				</div>
+				<!-- 모달 콘텐츠 -->
+			</div>
+			<!-- 모달 다이얼로그 -->
+		</div>
+		<!-- 모달 전체 윈도우 -->
+	</div>
+	   
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4" style="margin-top: 20px">
+				<div class="list-group">
+					<a href="#" class="list-group-item active"><span class="badge">15</span>
+						게시판 </a> <a href="board.html" class="list-group-item"> 게시판 </a> <a href="imageBoard.html"
+						class="list-group-item"><span class="badge">14</span> 이미지 게시판 </a>
+				</div>
+				
+				<div class="list-group">
+					<a href="#" class="list-group-item active"><span class="badge">1</span>
+						회원정보 </a> <a href="modify.html" class="list-group-item"> 회원정보 수정</a> <a href="modify.html"
+						class="list-group-item"><span class="badge"></span> 회원탈퇴 </a>
+				</div>
+			</div>
+
+			<div class="col-md-8">
+			
+			<hr>
+			
+			<table class="table">
+			
+			<tr>
+				<th class="success">글번호</th>
+				<td>1</td>
+				<th class="success">조회수</th>
+				<td>5</td>
+			</tr>
+			<tr>
+				<th class="success">작성자</th>
+				<td>테스트</td>
+				<th class="success">작성일</th>
+				<td>2020-08-04</td>
+			</tr>
+			<tr>
+				<th class="success">이메일</th>
+				<td>asdf123@email.com</td>
+				<th class="success">제목</th>
+				<td>테스트 글입니다</td>
+			</tr>
+
+			<tr>
+				<th class="success">첨부파일</th>
+				<td  colspan="3">
+				<a href="#">파일1</a>
+				<a href="#">파일2</a>
+				<a href="#">파일3</a>    
+				</td>	
+			</tr>
+			<tr>
+				<th class="success">글내용</th>
+				<td  colspan="3">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.    
+				</td>	
+			</tr>
+		</table>
+		
+		
+			<button type="button" class="btn btn-success pull-right">글수정</button>
+			<button type="button" class="btn btn-danger pull-right">글삭제</button>
+			<button type="button" class="btn btn-primary pull-right">글목록</button>
+		
+		
+			<div style="margin-top: 50px">
+				<h3>댓글</h3>
+			
+				<table class="table" style="margin-top: 20px">
+					<thead>
+						<tr>
+							<th>번 호</th>
+							<th>내 용</th>
+							<th>글쓴이</th>
+							<th>작성일자</th>
+						</tr>
+					</thead>
+					<tr>
+						<td>1</td>
+						<td>댓글 테스트</td>
+						<td>홍길동</td>
+						<td>2020/12/12</td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td>댓글 테스트</td>
+						<td>홍길동</td>
+						<td>2020/12/12</td>
+					</tr>
+				
+				</table>
+			</div>
+			
+			<div class="info"><h4>댓글 작성</h4></div>
+				<div>
+				<textarea class="form-control col-sm-5" rows="5"  placeholder="댓글을 작성해  주세요"></textarea>
+				<button style="margin-top: 15px" type="button" class="btn btn-success pull-right">댓글 등록</button>
+			</div>	
+	
+	
+	
+		</div>
+			
+			
+		</div>
+	</div>
+	
+	<div class="footer">
+		<div style="text-align: center">
+		<hr>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
+		</div>		
+		<hr>
+	</div>
+	
+		
+
+	<script src="jquery-3.5.1.js"></script>
+	<script src="bootstrap.js"></script>
+</body>
+</html>
